@@ -14,6 +14,7 @@
 		BE6D886E225F16DD00E3B073 /* TableColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D886D225F16DD00E3B073 /* TableColorCell.swift */; };
 		BE6D8870225F22C800E3B073 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D886F225F22C800E3B073 /* Color.swift */; };
 		BE6D8873225F56F500E3B073 /* Color+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8872225F56F500E3B073 /* Color+All.swift */; };
+		BE6D8875225F575700E3B073 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8874225F575700E3B073 /* Others.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BE6D886F225F22C800E3B073 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BE6D8871225F543900E3B073 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		BE6D8872225F56F500E3B073 /* Color+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+All.swift"; sourceTree = "<group>"; };
+		BE6D8874225F575700E3B073 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				BE6D886F225F22C800E3B073 /* Color.swift */,
 				BE6D8872225F56F500E3B073 /* Color+All.swift */,
 				BE6D886D225F16DD00E3B073 /* TableColorCell.swift */,
+				BE6D8874225F575700E3B073 /* Others.swift */,
 				BE6D8871225F543900E3B073 /* README.md */,
 				BE6D8861225F136B00E3B073 /* Assets.xcassets */,
 				BE6D8863225F136B00E3B073 /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				BE6D8870225F22C800E3B073 /* Color.swift in Sources */,
 				BE6D8860225F136900E3B073 /* ViewController.swift in Sources */,
+				BE6D8875225F575700E3B073 /* Others.swift in Sources */,
 				BE6D8873225F56F500E3B073 /* Color+All.swift in Sources */,
 				BE6D886E225F16DD00E3B073 /* TableColorCell.swift in Sources */,
 				BE6D885E225F136900E3B073 /* AppDelegate.swift in Sources */,
