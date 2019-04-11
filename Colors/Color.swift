@@ -15,6 +15,12 @@ struct Color {
 //            NSPatternColor
             return .scrubberTexturedBackground
         }
+        if name == "alternatingContentBackgroundColor[0]" {
+            return NSColor.alternatingContentBackgroundColors[0]
+        }
+        if name == "alternatingContentBackgroundColor[1]" {
+            return NSColor.alternatingContentBackgroundColors[1]
+        }
         let sel = NSSelectorFromString(name)
         return NSColor.perform(sel)?.takeRetainedValue() as! NSColor
     }
@@ -48,8 +54,8 @@ struct Color {
             Color(name: "gridColor", category: .table, description: "The color to use for the optional gridlines, such as those in a table view."),
             Color(name: "headerTextColor", category: .table, description: "The color to use for text in header cells in table views and outline views."),
 
-            //"alternatingContentBackgroundColor[0]",alternatingContentBackgroundColors[0], "The colors to use for alternating content, typically found in table views and collection views."),
-            //"alternatingContentBackgroundColor[1]",alternatingContentBackgroundColors[1], "The colors to use for alternating content, typically found in table views and collection views."),
+            Color(name: "alternatingContentBackgroundColor[0]", category: .table, description: "The colors to use for alternating content, typically found in table views and collection views."),
+            Color(name: "alternatingContentBackgroundColor[1]", category: .table, description: "The colors to use for alternating content, typically found in table views and collection views."),
 
             // Control
             Color(name: "controlAccentColor", category: .control, description: "The user's current accent color preference."),
