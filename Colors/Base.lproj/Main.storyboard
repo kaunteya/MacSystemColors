@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Colors" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Mac_Colors" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,12 +683,42 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="WindowController" customModule="Mac_Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Color" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="DF5F7AB4-7C86-4B34-AF36-CC94C2B105B7" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="3RZ-XB-792">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="CK2-U4-3Aa"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="PcP-MN-tqz"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="5nl-Ii-uqF"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="RWO-NQ-XjU"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="rS6-pB-ahR"/>
+                                <toolbarItem implicitItemIdentifier="0632161A-B283-4890-B38B-AB938E118BDE" label="" paletteLabel="Custom View" sizingBehavior="auto" id="iqW-qc-VlV">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="Mkn-TM-MWM">
+                                        <rect key="frame" x="0.0" y="14" width="116" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="1M6-za-EHs">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="Light"/>
+                                                <segment label="Dark" selected="YES" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <action selector="appearanceSelection:" target="B8D-0N-5wS" id="PLo-PE-lEX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="rS6-pB-ahR"/>
+                                <toolbarItem reference="iqW-qc-VlV"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -704,7 +734,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Colors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Mac_Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="660" height="325"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -802,7 +832,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="colorLightAqua" id="dvl-r1-X1x" customClass="TableColorCell" customModule="Colors" customModuleProvider="target">
+                                                        <tableCellView identifier="colorLightAqua" id="dvl-r1-X1x" customClass="TableColorCell" customModule="Mac_Colors" customModuleProvider="target">
                                                             <rect key="frame" x="279" y="1" width="113" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -835,7 +865,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="colorDark" id="CPl-lW-0ig" customClass="TableColorCell" customModule="Colors" customModuleProvider="target">
+                                                        <tableCellView identifier="colorDark" id="CPl-lW-0ig" customClass="TableColorCell" customModule="Mac_Colors" customModuleProvider="target">
                                                             <rect key="frame" x="395" y="1" width="92" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -900,7 +930,7 @@
                                     <rect key="frame" x="1" y="308" width="658" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="nhE-TM-VkH">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="nhE-TM-VkH">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

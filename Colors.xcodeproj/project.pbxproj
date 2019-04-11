@@ -15,10 +15,11 @@
 		BE6D8870225F22C800E3B073 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D886F225F22C800E3B073 /* Color.swift */; };
 		BE6D8873225F56F500E3B073 /* Color+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8872225F56F500E3B073 /* Color+All.swift */; };
 		BE6D8875225F575700E3B073 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8874225F575700E3B073 /* Others.swift */; };
+		BE6D8877225F5BEA00E3B073 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D8876225F5BEA00E3B073 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE6D885A225F136900E3B073 /* Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6D885A225F136900E3B073 /* Mac Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6D885D225F136900E3B073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE6D885F225F136900E3B073 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE6D8861225F136B00E3B073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		BE6D8871225F543900E3B073 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		BE6D8872225F56F500E3B073 /* Color+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+All.swift"; sourceTree = "<group>"; };
 		BE6D8874225F575700E3B073 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
+		BE6D8876225F5BEA00E3B073 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 		BE6D885B225F136900E3B073 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE6D885A225F136900E3B073 /* Colors.app */,
+				BE6D885A225F136900E3B073 /* Mac Colors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				BE6D885D225F136900E3B073 /* AppDelegate.swift */,
+				BE6D8876225F5BEA00E3B073 /* WindowController.swift */,
 				BE6D885F225F136900E3B073 /* ViewController.swift */,
 				BE6D886F225F22C800E3B073 /* Color.swift */,
 				BE6D8872225F56F500E3B073 /* Color+All.swift */,
@@ -80,9 +83,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE6D8859225F136900E3B073 /* Colors */ = {
+		BE6D8859225F136900E3B073 /* Mac Colors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE6D886A225F136B00E3B073 /* Build configuration list for PBXNativeTarget "Colors" */;
+			buildConfigurationList = BE6D886A225F136B00E3B073 /* Build configuration list for PBXNativeTarget "Mac Colors" */;
 			buildPhases = (
 				BE6D8856225F136900E3B073 /* Sources */,
 				BE6D8857225F136900E3B073 /* Frameworks */,
@@ -92,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = Colors;
+			name = "Mac Colors";
 			productName = Colors;
-			productReference = BE6D885A225F136900E3B073 /* Colors.app */;
+			productReference = BE6D885A225F136900E3B073 /* Mac Colors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE6D8859225F136900E3B073 /* Colors */,
+				BE6D8859225F136900E3B073 /* Mac Colors */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +153,7 @@
 				BE6D8870225F22C800E3B073 /* Color.swift in Sources */,
 				BE6D8860225F136900E3B073 /* ViewController.swift in Sources */,
 				BE6D8875225F575700E3B073 /* Others.swift in Sources */,
+				BE6D8877225F5BEA00E3B073 /* WindowController.swift in Sources */,
 				BE6D8873225F56F500E3B073 /* Color+All.swift in Sources */,
 				BE6D886E225F16DD00E3B073 /* TableColorCell.swift in Sources */,
 				BE6D885E225F136900E3B073 /* AppDelegate.swift in Sources */,
@@ -335,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE6D886A225F136B00E3B073 /* Build configuration list for PBXNativeTarget "Colors" */ = {
+		BE6D886A225F136B00E3B073 /* Build configuration list for PBXNativeTarget "Mac Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE6D886B225F136B00E3B073 /* Debug */,
