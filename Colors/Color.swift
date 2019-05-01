@@ -24,4 +24,10 @@ struct Color {
         let sel = NSSelectorFromString(name)
         return NSColor.perform(sel)?.takeRetainedValue() as! NSColor
     }
+
+    var rgb: String {
+        let ciColor = CIColor(color: color)!
+        let col = color.usingColorSpace(.deviceRGB)!
+        return "\(col.redComponent)"
+    }
 }

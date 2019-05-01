@@ -684,7 +684,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="WindowController" customModule="Mac_Colors" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Color" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Color" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -746,9 +746,9 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="qJb-1V-za8" viewBased="YES" id="903-6T-J7P">
-                                            <rect key="frame" x="0.0" y="0.0" width="729" height="299"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="714" height="299"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <size key="intercellSpacing" width="0.0" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -767,7 +767,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cat" id="ylh-PA-YQn">
-                                                            <rect key="frame" x="1" y="1" width="66" height="17"/>
+                                                            <rect key="frame" x="0.0" y="1" width="66" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsx-6C-BLk">
@@ -800,7 +800,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="name" id="3fn-oF-mmX">
-                                                            <rect key="frame" x="70" y="1" width="206" height="17"/>
+                                                            <rect key="frame" x="66" y="1" width="206" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwL-Mp-nhx">
@@ -833,19 +833,24 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="colorLightAqua" id="dvl-r1-X1x" customClass="TableColorCell" customModule="Mac_Colors" customModuleProvider="target">
-                                                            <rect key="frame" x="279" y="1" width="113" height="23"/>
+                                                            <rect key="frame" x="272" y="1" width="113" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <box appearanceType="aqua" fixedFrame="YES" boxType="custom" borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-He-uTx">
-                                                                    <rect key="frame" x="2" y="-10" width="115" height="38"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <view key="contentView" ambiguous="YES" id="yG7-xn-IFS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="38"/>
+                                                                <box appearanceType="aqua" boxType="custom" borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-He-uTx">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="23"/>
+                                                                    <view key="contentView" id="yG7-xn-IFS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="113" height="23"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
                                                                     <color key="fillColor" red="1" green="0.87843137979999997" blue="0.69803923369999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="4W8-He-uTx" firstAttribute="leading" secondItem="dvl-r1-X1x" secondAttribute="leading" id="Ayd-xx-rFp"/>
+                                                                <constraint firstAttribute="bottom" secondItem="4W8-He-uTx" secondAttribute="bottom" id="KOs-Uk-hud"/>
+                                                                <constraint firstItem="4W8-He-uTx" firstAttribute="top" secondItem="dvl-r1-X1x" secondAttribute="top" id="UhP-eJ-Ms7"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4W8-He-uTx" secondAttribute="trailing" id="awb-EF-teB"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="colorBox" destination="4W8-He-uTx" id="MbB-s8-ak4"/>
                                                             </connections>
@@ -866,19 +871,24 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="colorDark" id="CPl-lW-0ig" customClass="TableColorCell" customModule="Mac_Colors" customModuleProvider="target">
-                                                            <rect key="frame" x="395" y="1" width="92" height="23"/>
+                                                            <rect key="frame" x="385" y="1" width="92" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <box appearanceType="darkAqua" fixedFrame="YES" boxType="custom" borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="onE-9Q-dW5">
-                                                                    <rect key="frame" x="2" y="-10" width="107" height="38"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <view key="contentView" ambiguous="YES" id="CcG-3y-D6p">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="38"/>
+                                                                <box appearanceType="darkAqua" boxType="custom" borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="onE-9Q-dW5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="23"/>
+                                                                    <view key="contentView" id="CcG-3y-D6p">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="23"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
                                                                     <color key="fillColor" red="0.72941178080000002" green="0.40784314269999999" blue="0.78431373829999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="onE-9Q-dW5" secondAttribute="trailing" id="EtW-4S-Lr2"/>
+                                                                <constraint firstItem="onE-9Q-dW5" firstAttribute="leading" secondItem="CPl-lW-0ig" secondAttribute="leading" id="FiP-l1-dNA"/>
+                                                                <constraint firstAttribute="bottom" secondItem="onE-9Q-dW5" secondAttribute="bottom" id="d9p-Fk-fr0"/>
+                                                                <constraint firstItem="onE-9Q-dW5" firstAttribute="top" secondItem="CPl-lW-0ig" secondAttribute="top" id="qW5-lc-RXo"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="colorBox" destination="onE-9Q-dW5" id="4pd-0z-p3p"/>
                                                             </connections>
@@ -899,7 +909,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="description" id="w3d-CK-YmF">
-                                                            <rect key="frame" x="490" y="1" width="237" height="17"/>
+                                                            <rect key="frame" x="477" y="1" width="237" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpQ-cL-o7X">
@@ -935,7 +945,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="qJb-1V-za8">
-                                    <rect key="frame" x="0.0" y="0.0" width="729" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="714" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
