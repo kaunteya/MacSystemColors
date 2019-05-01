@@ -1,6 +1,6 @@
 import Cocoa
 enum TableCol: String {
-    case catCol, nameCol, lightCol, darkCol, descCol, rgba
+    case catCol, nameCol, lightCol, darkCol, descCol
 }
 
 class ViewController: NSViewController {
