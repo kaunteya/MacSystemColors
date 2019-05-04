@@ -25,9 +25,22 @@ struct Color {
         return NSColor.perform(sel)?.takeRetainedValue() as! NSColor
     }
 
-    var rgb: String {
-        let ciColor = CIColor(color: color)!
-        let col = color.usingColorSpace(.deviceRGB)!
-        return "\(col.redComponent)"
+    var rgb: String? {
+        guard let rgbColor = color.usingColorSpace(.deviceRGB) else {
+            return nil
+        }
+        let precision = 4
+        return "R=\(rgbColor.redComponent.pr(precision)) G=\(rgbColor.greenComponent.pr(precision)) B=\(rgbColor.blueComponent.pr(precision)) A=\(rgbColor.alphaComponent.pr(precision))"
+    }
+
+    var hexString: String? {
+        guard let rgbColor = color.usingColorSpace(.deviceRGB) else {
+            return nil
+        }
+        let red = Int(round(rgbColor.redComponent * 0xFF))
+        let green = Int(round(rgbColor.greenComponent * 0xFF))
+        let blue = Int(round(rgbColor.blueComponent * 0xFF))
+        let hexString = NSString(format: "#%02X%02X%02X", red, green, blue)
+        return hexString as String
     }
 }

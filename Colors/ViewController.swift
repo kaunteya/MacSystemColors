@@ -5,6 +5,9 @@ enum TableCol: String {
 
 class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var rgbaLabel: NSTextField!
+    @IBOutlet weak var hexLabel: NSTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let list = NSColorList(name: "System")
@@ -44,5 +47,18 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
             cell.textField?.stringValue = iColor.description
             return cell
         }
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        // Disable highlight
+        let selectedRow = tableView.selectedRow
+        let rowView = tableView.rowView(atRow: selectedRow, makeIfNecessary: false)
+        rowView?.selectionHighlightStyle = .regular
+        rowView?.isEmphasized = false
+
+        //Update details view
+        let color = Color.all[selectedRow]
+        rgbaLabel.stringValue = color.rgb ?? "-"
+        hexLabel.stringValue = color.hexString ?? "-"
     }
 }
