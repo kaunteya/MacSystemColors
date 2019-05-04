@@ -1,17 +1,13 @@
 import Cocoa
 enum TableCol: String {
-    case catCol, nameCol, lightCol, darkCol, descCol
+    case catCol, nameCol, lightCol, darkCol, descCol, rgbCol, hexCol
 }
 
 class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var rgbaLabel: NSTextField!
-    @IBOutlet weak var hexLabel: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let list = NSColorList(name: "System")
-//        list.color
         let sel = NSSelectorFromString("labelColor")
         let gr = NSColor.perform(sel)?.takeRetainedValue() as! NSColor
         print(gr)
@@ -46,19 +42,15 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
             let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "description"), owner: self) as! NSTableCellView
             cell.textField?.stringValue = iColor.description
             return cell
+        case .rgbCol:
+            let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "rgb"), owner: self) as! NSTableCellView
+            cell.textField?.stringValue = iColor.rgb255 ?? "-"
+            return cell
+        case .hexCol:
+            let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "hex"), owner: self) as! NSTableCellView
+            cell.textField?.stringValue = iColor.hexString ?? "-"
+            return cell
+
         }
-    }
-
-    func tableViewSelectionDidChange(_ notification: Notification) {
-        // Disable highlight
-        let selectedRow = tableView.selectedRow
-        let rowView = tableView.rowView(atRow: selectedRow, makeIfNecessary: false)
-        rowView?.selectionHighlightStyle = .regular
-        rowView?.isEmphasized = false
-
-        //Update details view
-        let color = Color.all[selectedRow]
-        rgbaLabel.stringValue = color.rgb ?? "-"
-        hexLabel.stringValue = color.hexString ?? "-"
     }
 }

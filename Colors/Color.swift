@@ -30,7 +30,14 @@ struct Color {
             return nil
         }
         let precision = 4
-        return "R=\(rgbColor.redComponent.pr(precision)) G=\(rgbColor.greenComponent.pr(precision)) B=\(rgbColor.blueComponent.pr(precision)) A=\(rgbColor.alphaComponent.pr(precision))"
+        return "(\(rgbColor.redComponent.pr(precision)), \(rgbColor.greenComponent.pr(precision)), \(rgbColor.blueComponent.pr(precision)) \(rgbColor.alphaComponent.pr(precision)))"
+    }
+
+    var rgb255: String? {
+        guard let rgbColor = color.usingColorSpace(.deviceRGB) else {
+            return nil
+        }
+        return "(\(Int(rgbColor.redComponent * 255)),  \(Int(rgbColor.greenComponent * 255)),  \(Int(rgbColor.blueComponent * 255)))"
     }
 
     var hexString: String? {
