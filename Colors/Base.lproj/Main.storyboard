@@ -719,6 +719,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="9Tm-OP-H3q" name="value" keyPath="values.catCol" id="S4v-wS-DeI"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="CA76429C-7EE4-44C2-A3C2-DE3DFAA96C3F" label="" paletteLabel="Custom View" sizingBehavior="auto" id="1s0-BK-Kbw">
@@ -730,24 +733,45 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="9Tm-OP-H3q" name="value" keyPath="values.descCol" id="ZFj-u0-qGw"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="8B987427-1FDF-4123-B740-8ACBC88BF0C5" label="" paletteLabel="Custom View" sizingBehavior="auto" id="trh-rw-sk8">
+                                <toolbarItem implicitItemIdentifier="36C4EE9A-1A7C-4D11-9C71-47EE1C4BD48D" label="" paletteLabel="Custom View" sizingBehavior="auto" id="nY7-Gx-bPQ">
                                     <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="fwt-0K-IIg">
-                                        <rect key="frame" x="0.0" y="14" width="108" height="54"/>
+                                    <button key="view" verticalHuggingPriority="750" id="det-xa-nBC">
+                                        <rect key="frame" x="0.0" y="14" width="122" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="Values" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qgi-uq-EQg">
+                                        <buttonCell key="cell" type="push" title="RGBA" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IRP-w4-3Fn">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="9Tm-OP-H3q" name="value" keyPath="values.rgbCol" id="rCM-GW-6YP"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="025ED1DB-BE00-4B88-84B0-E76D35718F28" label="" paletteLabel="Custom View" sizingBehavior="auto" id="8Wr-8z-etC">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="rjW-ub-bQ5">
+                                        <rect key="frame" x="0.0" y="14" width="122" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="HEX" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VN9-ji-wCU">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <binding destination="9Tm-OP-H3q" name="value" keyPath="values.hexCol" id="eYY-5S-OHt"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
+                                <toolbarItem reference="nY7-Gx-bPQ"/>
+                                <toolbarItem reference="8Wr-8z-etC"/>
                                 <toolbarItem reference="3dl-S2-Y17"/>
                                 <toolbarItem reference="1s0-BK-Kbw"/>
-                                <toolbarItem reference="trh-rw-sk8"/>
                                 <toolbarItem reference="rS6-pB-ahR"/>
                                 <toolbarItem reference="iqW-qc-VlV"/>
                             </defaultToolbarItems>
@@ -761,6 +785,7 @@
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="9Tm-OP-H3q"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
@@ -781,7 +806,7 @@
                                             <rect key="frame" x="1" y="0.0" width="658" height="324"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="qJb-1V-za8" viewBased="YES" id="903-6T-J7P">
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="qJb-1V-za8" viewBased="YES" id="903-6T-J7P">
                                                     <rect key="frame" x="0.0" y="0.0" width="658" height="299"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="0.0" height="2"/>

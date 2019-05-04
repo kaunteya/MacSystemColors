@@ -11,6 +11,28 @@ class ViewController: NSViewController {
         let sel = NSSelectorFromString("labelColor")
         let gr = NSColor.perform(sel)?.takeRetainedValue() as! NSColor
         print(gr)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
+    }
+
+    @objc func userDefaultsDidChange(_ notification: Notification) {
+        print("Changed \(notification.object) \(notification)")
+        reloadColumnVisibility()
+    }
+
+    func reloadColumnVisibility() {
+        tableView.tableColumns.forEach { col in
+            if let value = UserDefaults.standard.value(forKey: col.identifier.rawValue),
+                let bol = value as? Bool, bol == false {
+                col.isHidden = true
+            } else {
+                col.isHidden = false
+            }
+        }
+    }
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print("Changed \(keyPath)")
     }
 }
 

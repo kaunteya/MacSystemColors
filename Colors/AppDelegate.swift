@@ -10,17 +10,14 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        UserDefaults.standard.register(defaults: [
+            "catCol": false,
+            "descCol": false,
+            "rgbCol": true,
+            "hexCol": true
+            ]
+        )
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
 
