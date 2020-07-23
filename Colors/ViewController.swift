@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     }
 
     @objc func userDefaultsDidChange(_ notification: Notification) {
-        print("Changed \(notification.object) \(notification)")
+//        print("Changed \(notification.object) \(notification)")
         reloadColumnVisibility()
     }
 
