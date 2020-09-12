@@ -1,3 +1,3 @@
 
-![Banner](/Others/demo.gif)
+![Banner](/Others/banner.png)
 
