@@ -5,3 +5,11 @@ extension CGFloat {
         return String(format: "%.\(l)f", self)
     }
 }
+
+extension UserDefaults {
+    @objc dynamic var colorsType: Int {
+        get { integer(forKey: #function) }
+        set { set(newValue, forKey: #function)}
+    }
+}
+

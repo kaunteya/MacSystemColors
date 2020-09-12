@@ -1,10 +1,18 @@
 import Cocoa
+import Combine
+
 enum TableCol: String {
     case catCol, nameCol, lightCol, darkCol, descCol, rgbCol, hexCol
 }
 
 class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
+
+    private var observerStorage = Set<AnyCancellable>()
+
+    var colorList: [Color] {
+        UserDefaults.standard.colorsType == 0 ? Color.elementColors : Color.standardColors
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +21,11 @@ class ViewController: NSViewController {
         print(gr)
 
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
+        UserDefaults.standard
+            .publisher(for: \.colorsType)
+            .sink { newValue in
+                self.tableView.reloadData()
+        }.store(in: &self.observerStorage)
     }
 
     @objc func userDefaultsDidChange(_ notification: Notification) {
@@ -38,11 +51,11 @@ class ViewController: NSViewController {
 
 extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return Color.all.count
+        colorList.count
     }
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let iColor = Color.all[row]
+        let iColor = colorList[row]
         switch TableCol(rawValue: tableColumn!.identifier.rawValue)! {
         case .catCol:
             let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cat"), owner: self) as! NSTableCellView

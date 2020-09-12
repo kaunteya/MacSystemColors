@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -688,7 +688,7 @@
                     <window key="window" title="Mac System Colors" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="721" height="287"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="DF5F7AB4-7C86-4B34-AF36-CC94C2B105B7" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="small" id="3RZ-XB-792">
                             <allowedToolbarItems>
@@ -767,12 +767,31 @@
                                         </connections>
                                     </button>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="94859220-B9B8-4603-8C31-2CB810C57E8D" label="Colors" paletteLabel="Custom View" sizingBehavior="auto" id="F6o-S0-oBd">
+                                    <nil key="toolTip"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="rje-12-fqM">
+                                        <rect key="frame" x="0.0" y="14" width="181" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="selectOne" id="ZGz-Xa-0UL">
+                                            <font key="font" metaFont="system"/>
+                                            <segments>
+                                                <segment label="UI Element" width="87" selected="YES"/>
+                                                <segment label="Standard" width="87" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                        <connections>
+                                            <binding destination="9Tm-OP-H3q" name="selectedIndex" keyPath="values.colorsType" id="ZnW-Tz-yRJ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="nY7-Gx-bPQ"/>
                                 <toolbarItem reference="8Wr-8z-etC"/>
                                 <toolbarItem reference="3dl-S2-Y17"/>
                                 <toolbarItem reference="1s0-BK-Kbw"/>
+                                <toolbarItem reference="rS6-pB-ahR"/>
+                                <toolbarItem reference="F6o-S0-oBd"/>
                                 <toolbarItem reference="rS6-pB-ahR"/>
                                 <toolbarItem reference="iqW-qc-VlV"/>
                             </defaultToolbarItems>
@@ -788,27 +807,27 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="9Tm-OP-H3q"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="195.5" y="258.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Mac_Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="786" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="658" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="3" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-qz-Czb">
-                                <rect key="frame" x="0.0" y="0.0" width="786" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="658" height="221"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="21" horizontalPageScroll="10" verticalLineScroll="21" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h7-WF-dBm">
-                                        <rect key="frame" x="0.0" y="0.0" width="660" height="170"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="656" height="221"/>
                                         <clipView key="contentView" id="mB1-xE-5Z8">
-                                            <rect key="frame" x="1" y="0.0" width="658" height="169"/>
+                                            <rect key="frame" x="1" y="0.0" width="654" height="220"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="qJb-1V-za8" viewBased="YES" id="903-6T-J7P">
-                                                    <rect key="frame" x="0.0" y="0.0" width="658" height="144"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="654" height="195"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="0.0" height="4"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1027,7 +1046,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn identifier="descCol" width="101" minWidth="10" maxWidth="3.4028234663852886e+38" id="eTN-2y-Sqb">
+                                                        <tableColumn identifier="descCol" width="97" minWidth="10" maxWidth="3.4028234663852886e+38" id="eTN-2y-Sqb">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Description">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1040,11 +1059,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="description" id="w3d-CK-YmF">
-                                                                    <rect key="frame" x="557" y="2" width="101" height="17"/>
+                                                                    <rect key="frame" x="557" y="2" width="97" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gpQ-cL-o7X">
-                                                                            <rect key="frame" x="0.0" y="1" width="101" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="1" width="97" height="16"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Yfm-00-AZK">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1072,7 +1091,7 @@
                                             </subviews>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="4XC-f4-PqV">
-                                            <rect key="frame" x="1" y="288" width="658" height="16"/>
+                                            <rect key="frame" x="1" y="256" width="654" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="nhE-TM-VkH">
@@ -1080,7 +1099,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" id="qJb-1V-za8">
-                                            <rect key="frame" x="0.0" y="0.0" width="658" height="25"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="654" height="25"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
@@ -1106,7 +1125,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="682.5"/>
+            <point key="canvasLocation" x="101" y="682"/>
         </scene>
     </scenes>
 </document>
